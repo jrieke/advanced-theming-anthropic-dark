@@ -8,7 +8,7 @@ import plotly.express as px
 import pydeck as pdk
 import streamlit as st
 
-st.set_page_config("Anthropic theme", "🟠")
+st.set_page_config("Anthropic dark theme", "🟤")
 st.logo(
     "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/anthropic.png"
 )
