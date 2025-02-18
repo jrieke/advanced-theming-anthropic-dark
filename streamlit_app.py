@@ -15,51 +15,67 @@ st.logo(
 st.title("Anthropic dark theme")
 
 if st.checkbox("Enable CSS hacks", True):
+    codeBackgroundColor = "#232322"
+
+    titleFontSize = "40px"
+    titleFontWeight = "500"
+    headerFontSize = "32px"
+    headerFontWeight = "500"
+    subheaderFontSize = "24px"
+    subheaderFontWeight = "500"
+
+    pageHoverBackgroundColor = "#1a1918"
+    pageFontSize = "14px"
+
+    activePageBackgroundColor = "#1a1918"
+    activePageHoverBackgroundColor = "#1a1918"
+    
+    
     st.html(
-        """
+        f"""
         <style>
-        body {
+        body {{
             -webkit-font-smoothing: antialiased;
-        }
+        }}
         
-        .stSidebar > div:nth-of-type(2) > div > div {
+        .stSidebar > div:last-of-type > div > div {{
             background-image: linear-gradient(to right, transparent 20%, rgba(34, 34, 34, 0.3) 28%, transparent 36%);
-        }
+        }}
         
-        .stCode pre {
-            background-color: #232322;
-        }
+        .stCode pre {{
+            background-color: {codeBackgroundColor};
+        }}
         
-        h1 {
-            font-size: 40px !important;
-            font-weight: 500 !important;
-        }
+        h1 {{
+            font-size: {titleFontSize} !important;
+            font-weight: {titleFontWeight} !important;
+        }}
         
-        h2 {
-            font-size: 32px !important;
-            font-weight: 500 !important;
-        }
+        h2 {{
+            font-size: {headerFontSize} !important;
+            font-weight: {headerFontWeight} !important;
+        }}
         
-        h3 {
-            font-size: 24px !important;
-            font-weight: 500 !important;
-        }
+        h3 {{
+            font-size: {subheaderFontSize} !important;
+            font-weight: {subheaderFontWeight} !important;
+        }}
         
         /* First page in sidebar nav */
-        [data-testid="stSidebarNav"] li:first-of-type a {
-            background-color: #1a1918 !important;
-        }
-        [data-testid="stSidebarNav"] li:first-of-type a:hover {
-            background-color: #1a1918 !important;
-        }
+        [data-testid="stSidebarNav"] li:first-of-type a {{
+            background-color: {activePageBackgroundColor} !important;
+        }}
+        [data-testid="stSidebarNav"] li:first-of-type a:hover {{
+            background-color: {activePageHoverBackgroundColor} !important;
+        }}
         
         /* Other pages in sidebar nav */
-        [data-testid="stSidebarNav"] li a:hover {
-            background-color: #1a1918 !important;
-        }
-        [data-testid="stSidebarNav"] li a span {
-            font-size: 14px !important;
-        }
+        [data-testid="stSidebarNav"] li a:hover {{
+            background-color: {pageHoverBackgroundColor} !important;
+        }}
+        [data-testid="stSidebarNav"] li a span {{
+            font-size: {pageFontSize} !important;
+        }}
         </style>
         """
     )
