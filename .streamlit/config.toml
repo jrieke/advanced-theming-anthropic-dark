@@ -5,15 +5,19 @@ enableStaticServing = true
 primaryColor = "#ae5630"
 backgroundColor = "#2a2a28"
 secondaryBackgroundColor = "#232220"
-sidebarBackgroundColor = "#21201f"
-sidebarSecondaryBackgroundColor = "#232220"
 textColor = "#e5e5e2"
 linkColor = "#e5e5e2"
 borderColor = "#343330"
-showBorderAroundInputs = true
-roundness = 0.375
+showWidgetBorder = true
+baseRadius = "0.6rem"
 font = "Styrene B"
 codeFont = "Fira Code"
+codeBackgroundColor = "#232322"
+showSidebarBorder = true
+
+[theme.sidebar]
+backgroundColor = "#21201f"
+secondaryBackgroundColor = "#232220"
 
 [[theme.fontFaces]]
 url = "app/static/FiraCode-VF.ttf"

@@ -15,7 +15,6 @@ st.logo(
 st.title("Anthropic dark theme")
 
 if st.checkbox("Enable CSS hacks", True):
-    codeBackgroundColor = "#232322"
 
     titleFontSize = "40px"
     titleFontWeight = "500"
@@ -36,14 +35,6 @@ if st.checkbox("Enable CSS hacks", True):
         <style>
         body {{
             -webkit-font-smoothing: antialiased;
-        }}
-        
-        .stSidebar > div:last-of-type > div > div {{
-            background-image: linear-gradient(to right, transparent 20%, rgba(34, 34, 34, 0.3) 28%, transparent 36%);
-        }}
-        
-        .stCode pre {{
-            background-color: {codeBackgroundColor};
         }}
         
         h1 {{
