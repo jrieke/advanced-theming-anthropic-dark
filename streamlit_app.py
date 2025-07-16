@@ -14,62 +14,18 @@ st.logo(
 )
 st.title("Anthropic dark theme")
 
-if st.checkbox("Enable CSS hacks", True):
-
-    titleFontSize = "40px"
-    titleFontWeight = "500"
-    headerFontSize = "32px"
-    headerFontWeight = "500"
-    subheaderFontSize = "24px"
-    subheaderFontWeight = "500"
-
-    pageHoverBackgroundColor = "#1a1918"
-    pageFontSize = "14px"
-
-    activePageBackgroundColor = "#1a1918"
-    activePageHoverBackgroundColor = "#1a1918"
     
     
-    st.html(
-        f"""
-        <style>
-        body {{
-            -webkit-font-smoothing: antialiased;
-        }}
-        
-        h1 {{
-            font-size: {titleFontSize} !important;
-            font-weight: {titleFontWeight} !important;
-        }}
-        
-        h2 {{
-            font-size: {headerFontSize} !important;
-            font-weight: {headerFontWeight} !important;
-        }}
-        
-        h3 {{
-            font-size: {subheaderFontSize} !important;
-            font-weight: {subheaderFontWeight} !important;
-        }}
-        
-        /* First page in sidebar nav */
-        [data-testid="stSidebarNav"] li:first-of-type a {{
-            background-color: {activePageBackgroundColor} !important;
-        }}
-        [data-testid="stSidebarNav"] li:first-of-type a:hover {{
-            background-color: {activePageHoverBackgroundColor} !important;
-        }}
-        
-        /* Other pages in sidebar nav */
-        [data-testid="stSidebarNav"] li a:hover {{
-            background-color: {pageHoverBackgroundColor} !important;
-        }}
-        [data-testid="stSidebarNav"] li a span {{
-            font-size: {pageFontSize} !important;
-        }}
-        </style>
-        """
-    )
+st.html(
+    f"""
+    <style>
+    body {{
+        -webkit-font-smoothing: antialiased;
+    }}
+    
+    </style>
+    """
+)
 
 
 def page1():
